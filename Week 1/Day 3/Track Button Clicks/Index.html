@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Button Clicks</title>
+</head>
+<body>
+    <h1>Track Button Clicks Using Closure</h1>
+    <h2>Count is <span id="countNmbr"></span></h2>
+    <button onclick="incrementCounter()">Click Me</button>
+     <!-- <button id="btn">Click Me</button> -->
+
+    <script>
+        let countNmbr=document.querySelector("#countNmbr")
+
+        let incrementCounter = ( function counterTrack(){
+            let count=0
+            
+             function Increment(){
+                countNmbr.textContent++
+            }
+
+          return Increment;
+
+           
+        })()
+
+
+        // Second Method
+
+        /*let btn=document.querySelector("#btn")
+
+        function counterTrack(){
+            let count=0
+
+            function Increment(){
+                countNmbr.textContent=count++
+            }
+
+            return Increment
+        }
+
+        let count=counterTrack()
+
+        btn.addEventListener('click',count)*/
+    </script>
+</body>
+</html>

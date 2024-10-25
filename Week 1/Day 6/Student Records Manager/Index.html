@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records Manager</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Records Manager</h1>
+        <div id="student-list"></div>
+
+        <h2>Add New Student</h2>
+        <form id="student-form">
+            <input type="text" id="student-name" placeholder="Name" required>
+            <input type="text" id="student-scores" placeholder="Scores (comma separated)" required>
+            <button type="submit">Add Student</button>
+        </form>
+
+        <div id="stats">
+            <p id="highest-score"></p>
+            <p id="lowest-score"></p>
+            <p id="total-students"></p>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>

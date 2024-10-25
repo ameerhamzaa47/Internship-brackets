@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenheit</title>
+</head>
+<body>
+    <h1>Celsius to Fahrenheit</h1>
+
+    <input id="cel" type="number" placeholder="Temperaturea in Celsius" >
+    <h3>Temperaturea in Fahrenheit is <mark id="far"></mark></h3>
+    <button onclick="calFunction()">Calculate</button>
+
+
+    <script>
+
+        let cel=document.querySelector("#cel")
+        let far=document.querySelector("#far")
+        
+        calFunction=()=>{
+            let Celsius=cel.value
+            let Fahrenheit=(Celsius* 9/5)+32
+            far.textContent=Fahrenheit.toFixed(2)
+        }
+
+    </script>
+</body>
+</html>

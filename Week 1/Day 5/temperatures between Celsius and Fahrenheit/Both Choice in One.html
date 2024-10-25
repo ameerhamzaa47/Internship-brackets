@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperaturea</title>
+</head>
+<body>
+
+    <h1>Temperaturea Converter</h1>
+    <h3 id="value"></h3>
+
+    <script>
+       let Choice=prompt('Enter Temperaturea: For Celsius to Fahrenheit (type=f) For Fahrenheit to Celsius (type=c)')
+       let value=document.querySelector('#value')
+       
+       if(Choice=='F' || Choice=='f'){
+        let Celsius=prompt('Enter Temperaturea in Celsius')
+        let Fahrenheit=(Celsius* 9/5)+32
+        value.textContent=`Temperaturea in Fahrenheit is ${Fahrenheit.toFixed(2)}`
+       }else 
+       if(Choice=='C' || Choice=='c'){
+        let Fahrenheit=prompt("Enter Temperaturea in Fahrenheit")
+        let Celsius = (Fahrenheit - 32) * 5 / 9
+        value.textContent=`Temperaturea in Celsius is ${Celsius.toFixed(2)}`
+       }
+       else{
+        value.textContent=`Invalid Input!`
+       }
+
+    </script>
+</body>
+</html>

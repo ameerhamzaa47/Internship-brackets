@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        th {
+            background-color: #28a745;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        td {
+            color: #333;
+        }
+
+        .highlight {
+            background-color: #ffeb3b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>All Student From JSON</h1>
+        <table border="3">
+            <thead>
+                <th>Name</th>
+                <th>Score</th>
+            </thead>
+            <tbody id="tbl">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+        let tbl = document.querySelector('#tbl')
+
+        getData = async () => {
+            let resp = await fetch('./Students.json')
+            let res = await resp.json()
+            console.log('res', res);
+
+
+
+            res.map((student) => {
+
+                let row = tbl.insertRow()
+                let nameCell = row.insertCell(0);
+                let scoreCell = row.insertCell(1);
+
+                nameCell.innerHTML = student.name
+
+
+                let score = student.scores;
+                let averageScore = score.reduce((a, b) => a + b, 0) / score.length;
+
+                scoreCell.innerHTML = averageScore.toFixed(2)
+            })
+        }
+
+        getData()
+
+
+    </script>
+</body>
+
+</html>

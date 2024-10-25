@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit to Celsius</title>
+</head>
+<body>
+    <h1>Fahrenheit to Celsius</h1>
+    <b>Temperaturea in Fahrenheit is <span id="fahren"></span></b>
+    <p>Temperaturea in Celsius is <span id="cel"></span></p>
+
+
+    <script>
+
+        let cel=document.querySelector("#cel")
+        let fahren=document.querySelector("#fahren")
+       let Fahrenheit=prompt("Enter Temperature in Fahrenheit")
+       fahren.textContent=Fahrenheit
+
+
+
+       let Celsius=(Fahrenheit-32)*5/9
+       cel.textContent=Celsius.toFixed(2)
+    </script>
+</body>
+</html>

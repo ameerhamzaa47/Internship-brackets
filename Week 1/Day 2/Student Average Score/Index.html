@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Average Score</title>
+</head>
+<body>
+    <h1>Students Average Score</h1>
+
+    <script>
+    
+
+    let students=[]
+    
+    function enterStudent(){
+        let studentNumber=parseInt(prompt("Enter Number of Students!"))
+
+    for(let i=0;i<studentNumber;i++){
+        let name= prompt(`Enter Name of Student ${i+1}`)
+        let score= parseFloat(prompt(`Enter Score of ${name}`))
+        students.push({name,score})
+    }
+    }
+    enterStudent()
+
+    function calculateScore(){
+        totalScore=0
+
+        students.forEach((val)=>{
+            totalScore += val.score
+        })
+
+        let averageScore=totalScore/students.length
+        return averageScore
+    }
+
+   
+      
+    if(students.length>0){
+        let average = calculateScore(students);
+        console.log(`The average score of the students is: ${average.toFixed(2)}`);
+    }else{
+        console.log("No students were entered.");
+    }
+    
+    </script>
+</body>
+</html>

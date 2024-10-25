@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counts the Occurrences of Each String</title>
+</head>
+<body>
+    <h1>Counts the Occurrences of Each String</h1>
+
+
+    <script>
+
+        let Name=prompt("Enter Any String")
+
+
+        let arr=Name.split('')
+        
+        let countString=[]
+
+        for(let i=0;i<arr.length;i++){
+            if(!countString[arr[i]]){
+                countString[arr[i]]=1
+            }else{
+                countString[arr[i]]++
+            }
+        }
+        
+        console.log(countString);
+        
+    </script>
+</body>
+</html>

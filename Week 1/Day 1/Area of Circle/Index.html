@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Circle</title>
+</head>
+<body>
+    <h1>Area Of Circle</h1>
+    <h3>Area is <span id="area"></span></h3>
+
+    <script>
+        let area=document.querySelector('#area')
+        
+        let enterArea=prompt('Enter Radius')
+        let calArea= Math.PI * enterArea * enterArea
+        let pointArea=calArea.toFixed(2)
+        area.textContent=pointArea
+    </script>
+</body>
+</html>

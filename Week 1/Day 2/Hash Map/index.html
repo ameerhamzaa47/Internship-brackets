@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Map</title>
+</head>
+<body>
+    <h1>Hash Map</h1>
+    <p>Hash Map is an object that convert a arry into key value pairs.</p>
+
+
+    <script>
+        let S="ahdjkkaase"
+        let arr=S.split('')
+    
+        hashmap={}
+
+        for(let i=0;i<arr.length;i++){
+            if(!hashmap[arr[i]]){
+                hashmap[arr[i]] = 1
+            }else{
+                hashmap[arr[i]] +=1
+            }
+        }
+
+        console.log('d',hashmap);
+        
+        
+    </script>
+</body>
+</html>
