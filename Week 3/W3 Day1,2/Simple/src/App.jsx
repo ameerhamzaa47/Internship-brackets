@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import './index.css'
 import Typed from 'typed.js';
-
+import img from './assets/myself.png'
 function App() {
 
   const elementRef = useRef(null); 
@@ -45,7 +45,7 @@ function App() {
         </div>
 
         <div className="px-16">
-            <img className="min-w-96 px-15 py-14" src="Screenshot_1.png" alt=""/>
+            <img className="min-w-96 px-15 py-14" src={img} alt=""/>
         </div>
 
     </main>
