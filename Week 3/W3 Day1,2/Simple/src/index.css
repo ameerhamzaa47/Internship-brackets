@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+.hamza{
+    width: 100%;
+}
+.hamza1{
+    background-color: rgb(242, 229, 242)
+}
+@tailwind utilities;
