@@ -11,7 +11,7 @@ function App() {
       <ResponsiveNavbar />
       <PhotoGallary />
       <Layout />
-      <Spinner/>
+      <Spinner />
     </>
   )
 }
