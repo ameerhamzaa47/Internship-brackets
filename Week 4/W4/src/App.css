@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+:root{
+    --body:rgba(128, 128, 128, 0.500);
+    --bg-color:white;
+    --heading-color:black;
+    --label-color:rgba(0, 0, 0, 0.774);
+    --button-color:rgba(0, 0, 255, 0.700);
+    --button-hover-color:rgb(0, 0, 255);
+    --focus:rgba(13, 13, 253, 0.6);
+    --error-color:rgba(255, 0, 0, 0.82);
+    --inputborder-color:gray;
+    --iconColor:blue;
+}
+
+[data-theme="dark"] {
+    --body: black;
+    --bg-color: #1f1f1f;
+    --heading-color: white;
+    --label-color: #ccc;
+    --button-color: #ff6347;
+    --button-hover-color: #ff4500;
+    --focus: rgba(13, 13, 253, 0.6);
+    --error-color: #ff0000;
+    --inputborder-color: #444;
+    --iconColor: #333;
+}
+@tailwind utilities;
