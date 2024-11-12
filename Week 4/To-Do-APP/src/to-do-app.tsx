@@ -48,16 +48,16 @@ const ToDoApp: FC = () => {
   return (
     <CommonContext.Provider value={{ taskList, deleteTask, editTask, toggleTaskChecked }}>
       <h1 className="text-orange-500 text-center text-4xl my-5 font-bold">To-Do-APP</h1>
-      <div className="flex flex-col">
+      <div className="flex flex-col justify-center items-center">
         <input
           type="text"
           value={task}
-          className="w-96 mx-auto my-2 h-10 rounded-md p-4 bg-orange-100 focus:bg-white focus:outline-orange-400"
+          className="w-80 md:w-96 mx-16  my-2 h-10 rounded-md p-4 bg-orange-100 focus:bg-white focus:outline-orange-400"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           placeholder="Enter Task Here..."
         />
-        <button onClick={getTask} className="bg-orange-500 w-96 mx-auto hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={getTask} className="bg-orange-500 w-80 md:w-96 mx-16 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
           Add
         </button>
         <Table />

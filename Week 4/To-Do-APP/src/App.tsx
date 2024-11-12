@@ -5,10 +5,10 @@ import ToDoApp from './to-do-app'
 function App() {
 
   return (
-    <>
+    <div className='h-full'>
       <ToDoApp/>
       <Table/>
-    </>
+    </div>
   )
 }
 
