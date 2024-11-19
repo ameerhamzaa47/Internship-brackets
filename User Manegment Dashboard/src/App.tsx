@@ -1,10 +1,14 @@
 import './App.css'
+import Dashboard from './Component/Dashboard'
+import ErrorBoundary from './Component/ErrorBoundry'
 
 function App() {
 
   return (
     <>
-      <h1>Hamza</h1>
+    <ErrorBoundary>
+      <Dashboard/>
+    </ErrorBoundary>
     </>
   )
 }
