@@ -1,4 +1,3 @@
-"use strict";
 function Calculator(a, c, b) {
     switch (c) {
         case '+':
@@ -21,13 +20,19 @@ function Calculator(a, c, b) {
     }
 }
 Calculator(5, '+', 5);
-const person = {
+var person = {
     name: 'Hamza',
     email: '84',
     password: 73,
     isactive: true,
     0: 'hamza',
     1: 'talha',
-    greet: (greet) => `Hello, ${greet}!`
+    greet: function (greet) { return "Hello, ".concat(greet, "!"); }
 };
 console.log(person);
+var obj = {
+    name: 'Hamza',
+    age: 9,
+    profile: null
+};
+console.log(obj.profile.city);

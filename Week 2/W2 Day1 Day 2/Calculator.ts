@@ -48,3 +48,14 @@ const person: datli={
 console.log(person);
 
 
+const user = {
+    profile: {
+        address: {
+            city: 'Lahore',
+        },
+    },
+};
+
+console.log(user.profile?.address?.city); // ✅ 'Lahore'
+console.log(user.profile?.address?.zipCode); 
+
